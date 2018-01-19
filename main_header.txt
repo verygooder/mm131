@@ -1,0 +1,11 @@
+Host: www.mm131.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:56.0) Gecko/20100101 Firefox/56.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+Cookie: UM_distinctid=15fdc2e0dd09-0e3c1c19112d828-49576c-fa000-15fdc2e0dd143e; CNZZDATA3866066=cnzz_eid%3D820629459-1494676185-https%253A%252F%252Fwww.baidu.com%252F%26ntime%3D1494676185; bdshare_firstime=1511227527095
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Cache-Control: max-age=0
+referer: http://www.mm131.com/
