@@ -3,6 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 import time
 from random import randint
+import re
 
 
 class Album(object):
@@ -16,7 +17,7 @@ class Album(object):
     def get_advanced_info(self):
         self.page_count = self.count_page()
         self.pic_lst = self.generate_all_pics()
-        self.cover = self.pic_lst[0]  # 小图index为0
+        self.cover = self.pic_lst[1]  # 第一图index为1
 
     def __repr__(self):
         return self.id + '(' + self.catalog + ')'
@@ -41,3 +42,20 @@ class Album(object):
         end = '.jpg'
         lst = [start + str(i) + end for i in range(0, self.page_count + 1)]
         return lst
+
+    def make_album_html(self):
+        filename = '../mm131pic/content/' + self.id + '.html'
+        with open('./format.html', 'r') as f:
+            html_format = f.read()
+        result = ''
+        for url in self.pic_lst:
+            line1 = '<a target="_blank" href="%s">' % url
+            line2 = '<img src="%s", height="320">' % url
+            line3 = ' '
+            line4 = '</a>'
+            add = ''.join([line1, line2, line3, line4])
+            result += add
+        html = re.sub(r'\<insert\>', result, html_format)
+        with open(filename, 'w') as f:
+            f.write(html)
+
